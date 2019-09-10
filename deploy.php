@@ -28,8 +28,10 @@ host('192.168.2.12')
     ->port(2222)
     ->set('deploy_path', '/volume2/web/thermostat');
 // Tasks
-/*task('deploy:droit', 'chmod -Rf 777 var/');
-after('deploy', 'deploy:droit');*/
+task('deploy:cache-prod', function() {
+    run('cd {{release_path}} && mkdir -p var/cache/prod && chmod -Rf 777 var/');
+});
+after('deploy', 'deploy:cache-prod');
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
