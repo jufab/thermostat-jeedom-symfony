@@ -44,13 +44,4 @@ class ThermostatController extends AbstractController
         }
         return new Response();
     }
-
-    /**
-     * @Route("/thermostat/", methods={"GET"})
-     */
-    public function getHello() {
-        return new Response(
-            '<html><body>hello Toi</body></html>'
-        );
-    }
 }
