@@ -38,8 +38,8 @@ task('build', function () {
     run('cd {{release_path}} && build');
 });
 
-/*task('deploy:droit', 'chmod -Rf 777 var/');
-after('deploy', 'deploy:droit');*/
+task('deploy:droit', 'chmod -Rf 777 var/');
+after('deploy', 'deploy:droit');
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
