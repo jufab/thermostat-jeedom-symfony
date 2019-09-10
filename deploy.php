@@ -21,8 +21,6 @@ set('git_tty', true);
 set('writable_mode', 'chmod');
 set('allow_anonymous_stats', false);
 
-set('http_user', 'admin');
-
 // Hosts
 
 set('default_stage', 'prod');
