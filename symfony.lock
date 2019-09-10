@@ -1,0 +1,65 @@
+{
+    "deployer/deployer": {
+        "version": "v6.5.0"
+    },
+    "deployer/phar-update": {
+        "version": "v2.1.0"
+    },
+    "doctrine/event-manager": {
+        "version": "v1.0.0"
+    },
+    "doctrine/persistence": {
+        "version": "1.1.1"
+    },
+    "doctrine/reflection": {
+        "version": "v1.0.0"
+    },
+    "pimple/pimple": {
+        "version": "v3.2.3"
+    },
+    "symfony/cache-contracts": {
+        "version": "v1.1.5"
+    },
+    "symfony/event-dispatcher-contracts": {
+        "version": "v1.1.5"
+    },
+    "symfony/http-client": {
+        "version": "v4.3.4"
+    },
+    "symfony/http-client-contracts": {
+        "version": "v1.1.6"
+    },
+    "symfony/messenger": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "8a2675c061737658bed85102e9241c752620e575"
+        },
+        "files": [
+            "config/packages/messenger.yaml"
+        ]
+    },
+    "symfony/mime": {
+        "version": "v4.3.4"
+    },
+    "symfony/polyfill-intl-idn": {
+        "version": "v1.12.0"
+    },
+    "symfony/polyfill-php72": {
+        "version": "v1.12.0"
+    },
+    "symfony/polyfill-php73": {
+        "version": "v1.12.0"
+    },
+    "symfony/process": {
+        "version": "v4.3.4"
+    },
+    "symfony/service-contracts": {
+        "version": "v1.1.6"
+    },
+    "symfony/var-exporter": {
+        "version": "v4.3.4"
+    }
+}
