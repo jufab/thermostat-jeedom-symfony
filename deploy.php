@@ -21,15 +21,11 @@ set('git_tty', true);
 set('writable_mode', 'chmod');
 set('allow_anonymous_stats', false);
 
-//set('http_user', 'admin');
+set('http_user', 'admin');
 
 // Hosts
 
-//host('192.168.2.15')
-//    ->user('pi')
-//    ->port(22)
-//    ->set('deploy_path', '~/thermostat');
-
+set('default_stage', 'prod');
 host('192.168.2.12')
     ->user('admin')
     ->stage("prod")
@@ -41,6 +37,10 @@ host('192.168.2.12')
 task('build', function () {
     run('cd {{release_path}} && build');
 });
+
+task('deploy:droit', 'chmod -Rf 777 var/');
+
+after('deploy', 'deploy:droit');
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
