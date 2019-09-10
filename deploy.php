@@ -19,6 +19,10 @@ set('git_tty', true);
 // Writable dirs by web server 
 //add('writable_dirs', []);
 set('writable_mode', 'chmod');
+set('http_user', 'http');
+set('writable_chmod_mode','0775');
+
+//set('writable_use_sudo', true);
 set('allow_anonymous_stats', false);
 
 // Hosts
@@ -36,8 +40,8 @@ task('build', function () {
     run('cd {{release_path}} && build');
 });
 
-task('deploy:droit', 'chmod -Rf 777 var/');
-after('deploy', 'deploy:droit');
+/*task('deploy:droit', 'chmod -Rf 777 var/');
+after('deploy', 'deploy:droit');*/
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
