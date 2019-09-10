@@ -16,8 +16,8 @@ set('keep_releases', 1);
 // Writable dirs by web server 
 //add('writable_dirs', []);
 set('writable_mode', 'chmod');
-set('http_user', 'http');
-set('writable_chmod_mode','0777');
+/*set('http_user', 'http');
+set('writable_chmod_mode','0777');*/
 //set('writable_use_sudo', true);
 set('allow_anonymous_stats', false);
 // Hosts
@@ -28,10 +28,10 @@ host('192.168.2.12')
     ->port(2222)
     ->set('deploy_path', '/volume2/web/thermostat');
 // Tasks
-task('deploy:cache-prod', function() {
+/*task('deploy:cache-prod', function() {
     run('cd {{release_path}} && mkdir -p var/cache/prod && chmod -Rf 777 var/');
 });
-after('deploy', 'deploy:cache-prod');
+after('deploy', 'deploy:cache-prod');*/
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
