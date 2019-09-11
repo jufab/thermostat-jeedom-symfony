@@ -16,8 +16,8 @@ set('keep_releases', 1);
 // Writable dirs by web server 
 //add('writable_dirs', []);
 set('writable_mode', 'chmod');
-/*set('http_user', 'http');
-set('writable_chmod_mode','0777');*/
+/*set('http_user', 'http');*/
+set('writable_chmod_mode','0777');
 //set('writable_use_sudo', true);
 set('allow_anonymous_stats', false);
 // Hosts
