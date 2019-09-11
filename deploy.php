@@ -33,9 +33,10 @@ host('192.168.2.12')
 });
 after('deploy', 'deploy:cache-prod');*/
 
-before('cleanup', function (){
+task('cleanup:before',function() {
     run('cd {{release_path}} && cd .. && chown -R admin *');
 });
+before('cleanup', 'cleanup:before');
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
