@@ -26,7 +26,7 @@ host('192.168.2.12')
     ->user('admin')
     ->stage("prod")
     ->port(2222)
-    ->set('deploy_path', '/volume2/web/thermostat');
+    ->set('deploy_path', '/volume1/web/thermostat');
 // Tasks
 /*task('deploy:cache-prod', function() {
     run('cd {{release_path}} && mkdir -p var/cache/prod && chmod -Rf 777 var/');
