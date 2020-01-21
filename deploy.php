@@ -20,6 +20,9 @@ set('http_user', 'http');
 set('writable_chmod_mode','0777');
 set('writable_use_sudo', false);
 set('allow_anonymous_stats', false);
+//
+set('bin/git', '/usr/local/bin/git');
+set('bin/php', '/usr/bin/php73');
 // Hosts
 set('default_stage', 'prod');
 host('192.168.2.12')
