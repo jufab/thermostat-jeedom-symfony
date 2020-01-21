@@ -9,7 +9,7 @@ set('application', 'thermostat-jeedom-symfony');
 set('repository', 'git@github.com:jufab/thermostat-jeedom-symfony.git');
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', false);
-set('keep_releases', 1);
+set('keep_releases', 2);
 // Shared files/dirs between deploys 
 //add('shared_files', []);
 //add('shared_dirs', []);
@@ -18,7 +18,7 @@ set('keep_releases', 1);
 set('writable_mode', 'chmod');
 set('http_user', 'http');
 set('writable_chmod_mode','0777');
-set('writable_use_sudo', true);
+set('writable_use_sudo', false);
 set('allow_anonymous_stats', false);
 // Hosts
 set('default_stage', 'prod');
@@ -34,7 +34,7 @@ host('192.168.2.12')
 after('deploy', 'deploy:cache-prod');*/
 
 task('cleanup:before',function() {
-    run('cd {{release_path}} && cd .. && sudo chown -R admin *');
+    run('cd {{release_path}} && cd .. && chown -R admin *');
 });
 before('cleanup', 'cleanup:before');
 

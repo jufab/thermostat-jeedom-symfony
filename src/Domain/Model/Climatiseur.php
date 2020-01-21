@@ -3,8 +3,6 @@
 namespace App\Domain\Model;
 
 use App\Domain\Event\TemperatureChangedEvent;
-use phpDocumentor\Reflection\Types\Integer;
-use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class Climatiseur
 {
