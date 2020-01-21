@@ -8,7 +8,7 @@ set('application', 'thermostat-jeedom-symfony');
 // Project repository
 set('repository', 'git@github.com:jufab/thermostat-jeedom-symfony.git');
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', false);
+set('git_tty', true);
 set('keep_releases', 2);
 // Shared files/dirs between deploys 
 //add('shared_files', []);
@@ -26,6 +26,7 @@ host('192.168.2.12')
     ->user('admin')
     ->stage("prod")
     ->port(2222)
+    ->forwardAgent()
     ->set('deploy_path', '/volume1/web/thermostat');
 // Tasks
 /*task('deploy:cache-prod', function() {
