@@ -29,7 +29,6 @@ host('192.168.2.12')
     ->user('admin')
     ->stage("prod")
     ->port(2222)
-    ->forwardAgent()
     ->set('deploy_path', '/volume1/web/thermostat');
 // Tasks
 /*task('deploy:cache-prod', function() {
