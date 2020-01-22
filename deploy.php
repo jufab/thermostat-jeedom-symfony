@@ -39,9 +39,9 @@ after('deploy', 'deploy:cache-prod');*/
 
 /*task('cleanup:before',function() {
     run('cd {{release_path}} && cd .. && chown -R admin *');
-});*/
+});
 before('cleanup', 'cleanup:before');
-
+*/
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
