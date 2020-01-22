@@ -11,7 +11,7 @@ set('repository', 'git@github.com:jufab/thermostat-jeedom-symfony.git');
 set('git_tty', true);
 set('keep_releases', 2);
 // Shared files/dirs between deploys 
-//add('shared_files', []);
+add('shared_files', ['.env']);
 //add('shared_dirs', []);
 // Writable dirs by web server 
 //add('writable_dirs', []);
